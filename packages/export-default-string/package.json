@@ -1,0 +1,10 @@
+{
+    "name": "export-default-string",
+    "version": "",
+    "main": "dist/export-default-string.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

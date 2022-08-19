@@ -1,14 +1,4 @@
-# umd-runtime-templates
-> Webpack UMD Runtime Templates
-
-## Install
-```sh
-npm i umd-runtime-templates
-```
-
-## Usage
-```js
-const URT = require('umd-runtime-templates');
+const URT = require('../lib');
 
 URT({
     template: 'export-default-string',
@@ -23,4 +13,3 @@ URT({
     content: 'test-string: module-exports-string',
     output: './scripts/dist/my-module-exports.js'
 });
-```

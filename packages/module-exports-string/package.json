@@ -1,0 +1,10 @@
+{
+    "name": "module-exports-string",
+    "version": "",
+    "main": "dist/module-exports-string.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

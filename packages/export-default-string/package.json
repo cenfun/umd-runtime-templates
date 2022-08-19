@@ -2,6 +2,7 @@
     "name": "export-default-string",
     "version": "",
     "main": "dist/export-default-string.js",
+    "private": true,
     "files": [
         "dist"
     ],

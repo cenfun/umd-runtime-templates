@@ -2,6 +2,7 @@
     "name": "lz-decompress-svg",
     "version": "",
     "main": "dist/lz-decompress-svg.js",
+    "private": true,
     "files": [
         "dist"
     ],

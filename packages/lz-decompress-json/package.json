@@ -2,6 +2,7 @@
     "name": "lz-decompress-json",
     "version": "",
     "main": "dist/lz-decompress-json.js",
+    "private": true,
     "files": [
         "dist"
     ],

@@ -20,7 +20,8 @@ module.exports = {
             const sources = {};
             const templates = {};
             option.jobList.forEach((item) => {
-                sources[item.name] = Util.readFileContentSync(`${item.componentPath}/src/${item.entryFile}`);
+                const entry = `${item.componentPath}/src/${item.entryFile}`;
+                sources[item.name] = Util.relativePath(entry);
                 templates[item.name] = Util.readFileContentSync(`${item.buildPath}/${item.buildName}.js`);
             });
 
@@ -32,28 +33,20 @@ module.exports = {
             const MG = require('markdown-grid');
 
             const rows = Object.keys(templates).map((k) => {
+                const source = sources[k];
                 return [
                     k,
-                    Util.BF(templates[k].length)
+                    Util.BF(templates[k].length),
+                    `[${source}](/${source})`
                 ];
             });
 
             const mg = MG({
-                columns: ['Template', 'Size'],
+                columns: ['Template', 'Size', 'Source'],
                 rows
             });
 
             const list = [mg];
-
-            list.push('');
-            list.push('## Sources');
-
-            Object.keys(templates).forEach((k) => {
-                list.push(`- ${k}`);
-                list.push('```');
-                list.push(sources[k]);
-                list.push('```');
-            });
 
             const tempPath = path.resolve(__dirname, 'template/README.md');
             const savePath = path.resolve(__dirname, '../README.md');

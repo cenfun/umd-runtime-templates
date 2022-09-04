@@ -25,35 +25,8 @@ URT({
 see [scripts/test.js](/scripts/test.js) and [scripts/index.html](/scripts/index.html)
 
 ## Templates
-|Template|Size|
-|--------|----|
-|export-default-string|687.0B|
-|lz-decompress-json|2.6KB|
-|module-exports-string|463.0B|
-
-## Sources
-- export-default-string
-```
-export default '{placeholder_content}';
-
-```
-- lz-decompress-json
-```
-import decompress from 'lz-utils/lib/decompress.js';
-
-const str = decompress('{placeholder_content}');
-const json = JSON.parse(str);
-
-export {
-    decompress,
-    json
-};
-
-export default json;
-
-```
-- module-exports-string
-```
-module.exports = '{placeholder_content}';
-
-```
+|Template|Size|Source|
+|--------|----|------|
+|export-default-string|687.0B|[packages/export-default-string/src/index.js](/packages/export-default-string/src/index.js)|
+|lz-decompress-json|2.6KB|[packages/lz-decompress-json/src/index.js](/packages/lz-decompress-json/src/index.js)|
+|module-exports-string|463.0B|[packages/module-exports-string/src/index.js](/packages/module-exports-string/src/index.js)|

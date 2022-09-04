@@ -14,10 +14,11 @@
     "workspaces": [
         "packages/*"
     ],
-    "dependencies": {},
     "devDependencies": {
         "eslint": "^8.18.0",
         "eslint-config-plus": "^1.0.3",
-        "eslint-plugin-html": "^6.2.0"
+        "eslint-plugin-html": "^6.2.0",
+        "lz-utils": "^1.0.5",
+        "markdown-grid": "^1.0.1"
     }
 }

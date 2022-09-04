@@ -9,12 +9,24 @@
 </head>
 
 <body>
-    <script src="./dist/my-export-default.js"></script>
-    <script src="./dist/my-module-exports.js"></script>
+    <script src="./dist/my-export-default-string.js"></script>
+    <script src="./dist/my-module-exports-string.js"></script>
+    <script src="./dist/my-lz-decompress-json.js"></script>
     <script>
-        console.log(window['my-export-default']);
-        console.log(window['my-module-exports']);
-        
+        let bundle = window['my-export-default-string'];
+        console.log(bundle);
+        console.assert(bundle.default === 'test-string: export-default-string');
+
+
+        bundle = window['my-module-exports-string'];
+        console.log(bundle);
+        console.assert(bundle === 'test-string: module-exports-string');
+
+
+        bundle = window['my-lz-decompress-json'];
+        console.log(bundle);
+        console.assert(bundle.default.jsonKey === 'json value');
+
     </script>
 </body>
 

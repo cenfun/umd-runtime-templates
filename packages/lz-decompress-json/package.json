@@ -1,0 +1,10 @@
+{
+    "name": "lz-decompress-json",
+    "version": "",
+    "main": "dist/lz-decompress-json.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

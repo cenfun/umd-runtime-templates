@@ -24,3 +24,16 @@ URT({
     })),
     output: './scripts/dist/my-lz-decompress-json.js'
 });
+
+
+URT({
+    template: 'lz-decompress-svg',
+    name: 'my-lz-decompress-svg',
+    content: compress(JSON.stringify({
+        id: 'myId',
+        icons: [{
+            name: 'myIcon'
+        }]
+    })),
+    output: './scripts/dist/my-lz-decompress-svg.js'
+});

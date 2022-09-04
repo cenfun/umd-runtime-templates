@@ -29,4 +29,5 @@ see [scripts/test.js](/scripts/test.js) and [scripts/index.html](/scripts/index.
 |:-------|---:|:-----|
 |export-default-string|687.0B|[packages/export-default-string/src/index.js](/packages/export-default-string/src/index.js)|
 |lz-decompress-json|2.6KB|[packages/lz-decompress-json/src/index.js](/packages/lz-decompress-json/src/index.js)|
+|lz-decompress-svg|3.4KB|[packages/lz-decompress-svg/src/index.js](/packages/lz-decompress-svg/src/index.js)|
 |module-exports-string|463.0B|[packages/module-exports-string/src/index.js](/packages/module-exports-string/src/index.js)|

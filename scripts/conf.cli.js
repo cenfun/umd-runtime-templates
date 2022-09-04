@@ -8,7 +8,7 @@ module.exports = {
 
     build: {
 
-        vendors: ['lz-decompress-json'],
+        vendors: true,
 
         webpackConfig: (conf, Util) => {
             conf.devtool = false;

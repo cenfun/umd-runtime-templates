@@ -12,6 +12,7 @@
     <script src="./dist/my-export-default-string.js"></script>
     <script src="./dist/my-module-exports-string.js"></script>
     <script src="./dist/my-lz-decompress-json.js"></script>
+    <script src="./dist/my-lz-decompress-svg.js"></script>
     <script>
         let bundle = window['my-export-default-string'];
         console.log(bundle);
@@ -26,6 +27,11 @@
         bundle = window['my-lz-decompress-json'];
         console.log(bundle);
         console.assert(bundle.default.jsonKey === 'json value');
+
+        bundle = window['my-lz-decompress-svg'];
+        console.log(bundle);
+        console.assert(bundle.default.id === 'myId');
+        console.assert(bundle.default.icons[0].id === 'myId-myIcon');
 
     </script>
 </body>

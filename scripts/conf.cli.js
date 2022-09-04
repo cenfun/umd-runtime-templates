@@ -42,7 +42,16 @@ module.exports = {
             });
 
             const mg = MG({
-                columns: ['Template', 'Size', 'Source'],
+                columns: [{
+                    name: 'Template',
+                    align: 'left'
+                }, {
+                    name: 'Size',
+                    align: 'right'
+                }, {
+                    name: 'Source',
+                    align: 'left'
+                }],
                 rows
             });
 

@@ -26,7 +26,7 @@ see [scripts/test.js](/scripts/test.js) and [scripts/index.html](/scripts/index.
 
 ## Templates
 |Template|Size|Source|
-|--------|----|------|
+|:-------|---:|:-----|
 |export-default-string|687.0B|[packages/export-default-string/src/index.js](/packages/export-default-string/src/index.js)|
 |lz-decompress-json|2.6KB|[packages/lz-decompress-json/src/index.js](/packages/lz-decompress-json/src/index.js)|
 |module-exports-string|463.0B|[packages/module-exports-string/src/index.js](/packages/module-exports-string/src/index.js)|

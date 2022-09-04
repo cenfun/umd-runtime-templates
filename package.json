@@ -1,7 +1,7 @@
 {
     "name": "umd-runtime-templates",
     "description": "Webpack UMD Runtime Templates",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "lib/index.js",
     "files": [
         "lib"

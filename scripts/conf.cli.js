@@ -1,14 +1,16 @@
-//starfall-cli config
-//https://github.com/cenfun/starfall-cli
+// starfall-cli config
+// https://github.com/cenfun/starfall-cli
 
 const os = require('os');
+const fs = require('fs');
 const path = require('path');
 
 module.exports = {
 
     build: {
 
-        vendors: true,
+        vendors: ['lz-decompress-json'],
+        safeModules: ['lz-utils'],
 
         webpackConfig: (conf, Util) => {
             conf.devtool = false;
@@ -22,14 +24,14 @@ module.exports = {
             option.jobList.forEach((item) => {
                 const entry = `${item.componentPath}/src/${item.entryFile}`;
                 sources[item.name] = Util.relativePath(entry);
-                templates[item.name] = Util.readFileContentSync(`${item.buildPath}/${item.buildName}.js`);
+                templates[item.name] = fs.readFileSync(`${item.buildPath}/${item.buildName}.js`).toString('utf-8');
             });
 
             const jsonPath = path.resolve(__dirname, '../lib/templates.json');
 
             Util.writeJSONSync(jsonPath, JSON.stringify(templates, null, 4));
 
-            //generating readme list
+            // generating readme list
             const MG = require('markdown-grid');
 
             const rows = Object.keys(templates).map((k) => {

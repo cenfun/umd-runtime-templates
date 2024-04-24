@@ -1,4 +1,4 @@
-import decompress from 'lz-utils/lib/decompress.js';
+import decompress from 'lz-utils/inflate-sync';
 
 const initSvg = function(icon, size = '100%') {
 
@@ -29,7 +29,7 @@ const initSvg = function(icon, size = '100%') {
     const hasPrefix = svg.indexOf(prefixPlaceholder) !== -1;
     let n = 0;
     if (hasPrefix) {
-        //dynamic prefix
+        // dynamic prefix
         Object.defineProperty(icon, 'svg', {
             get: function() {
                 n += 1;
@@ -46,7 +46,7 @@ const initSvg = function(icon, size = '100%') {
 const str = decompress('{placeholder_content}');
 const metadata = JSON.parse(str);
 
-//init id and content
+// init id and content
 const icons = metadata.icons;
 if (Array.isArray(icons)) {
     icons.forEach((icon) => {
@@ -54,7 +54,7 @@ if (Array.isArray(icons)) {
 
         const content = icon.content;
         if (typeof content === 'number') {
-            //duplicate content
+            // duplicate content
             icon.content = icons[content].content;
         }
     });

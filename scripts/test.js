@@ -15,11 +15,10 @@ URT({
 });
 
 
-const compress = require('lz-utils/lib/compress.js');
 URT({
     template: 'lz-decompress-json',
     name: 'my-lz-decompress-json',
-    content: compress(JSON.stringify({
+    content: URT.compress(JSON.stringify({
         jsonKey: 'json value'
     })),
     output: './scripts/dist/my-lz-decompress-json.js'
@@ -29,7 +28,7 @@ URT({
 URT({
     template: 'lz-decompress-svg',
     name: 'my-lz-decompress-svg',
-    content: compress(JSON.stringify({
+    content: URT.compress(JSON.stringify({
         id: 'myId',
         icons: [{
             name: 'myIcon'
@@ -37,3 +36,6 @@ URT({
     })),
     output: './scripts/dist/my-lz-decompress-svg.js'
 });
+
+console.log('=========================================================');
+console.log('please open scripts/index.html to check results');

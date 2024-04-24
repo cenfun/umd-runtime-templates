@@ -1,11 +1,12 @@
 {
     "name": "lz-decompress-json",
-    "version": "",
-    "main": "dist/lz-decompress-json.js",
+    "version": "1.0.1",
     "private": true,
+    "main": "dist/lz-decompress-json.js",
     "files": [
         "dist"
     ],
+    "license": "MIT",
     "dependencies": {},
     "devDependencies": {}
 }

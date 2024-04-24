@@ -1,11 +1,12 @@
 {
     "name": "export-default-string",
-    "version": "",
-    "main": "dist/export-default-string.js",
+    "version": "1.0.1",
     "private": true,
+    "main": "dist/export-default-string.js",
     "files": [
         "dist"
     ],
+    "license": "MIT",
     "dependencies": {},
     "devDependencies": {}
 }

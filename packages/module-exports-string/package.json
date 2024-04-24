@@ -1,11 +1,12 @@
 {
     "name": "module-exports-string",
-    "version": "",
-    "main": "dist/module-exports-string.js",
+    "version": "1.0.1",
     "private": true,
+    "main": "dist/module-exports-string.js",
     "files": [
         "dist"
     ],
+    "license": "MIT",
     "dependencies": {},
     "devDependencies": {}
 }

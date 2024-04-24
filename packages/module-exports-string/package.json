@@ -1,6 +1,6 @@
 {
     "name": "module-exports-string",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "private": true,
     "main": "dist/module-exports-string.js",
     "files": [

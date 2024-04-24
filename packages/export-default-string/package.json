@@ -1,6 +1,6 @@
 {
     "name": "export-default-string",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "private": true,
     "main": "dist/export-default-string.js",
     "files": [
